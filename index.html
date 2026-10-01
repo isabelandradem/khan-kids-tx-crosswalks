@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How Khan Kids assessments line up with CIRCLE Progress Monitoring (CPM), 2026-27: the matching Khan Kids assessment for each CPM measure, and where they differ.">
+<title>Khan Kids Assessments: CIRCLE Crosswalk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+  :root {
+    --page: #fff; --header: #f0f8ff; --text: #1a1a1a; --muted: #5c5c5c; --border: #e5e7eb; --border-2: #d1d5db;
+    --navy: #1e437c; --navy-2: #2c5282; --teal: #14bf96; --panel: #f0f4f8;
+    --al: #14bf96; --mo: #14bf96; --pa: #f0a030; --ad: #7b93b8;
+    --display: "Fredoka One", "Nunito", sans-serif; --body: "Nunito", "Helvetica Neue", Arial, sans-serif;
+    --r: 12px; color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--text); font: 400 1rem/1.5 var(--body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--navy-2); font-weight: 600; }
+  :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--teal); border-radius: 6px; }
+  h1, h2, h3 { margin: 0; text-wrap: balance; }
+  .header { background: var(--header); border-bottom: 1px solid var(--border); }
+  .header-inner { max-width: 1160px; margin: 0 auto; padding: 1rem clamp(16px, 4vw, 40px); }
+  .header img { height: 56px; width: auto; display: block; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: 0 72px; }
+  .hero { padding-block: clamp(28px, 4vw, 44px) 8px; max-width: 72ch; }
+  .hero h1 { font: 400 clamp(2rem, 4.4vw, 2.9rem)/1.12 var(--display); color: var(--navy); }
+  .hero p { margin: 12px 0 0; color: var(--muted); font-size: 1.08rem; }
+
+  .key { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 26px; }
+  .key-item { padding: 16px 18px; background: var(--panel); border-radius: var(--r); }
+  .key-item h2 { font: 800 1rem/1.3 var(--body); color: var(--navy); }
+  .key-item h2 .rel { font-size: 1rem; color: var(--navy); }
+  .key-item p { margin: 8px 0 0; font-size: .95rem; }
+
+  .rel { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 700; color: var(--muted); }
+  .rel i { width: 13px; height: 13px; border-radius: 50%; flex: none; }
+  .rel-al i { background: var(--al); }
+  .rel-mo i { box-shadow: inset 0 0 0 3px var(--mo); }
+  .rel-pa i { background: linear-gradient(90deg, var(--pa) 50%, transparent 50%); box-shadow: inset 0 0 0 2px var(--pa); }
+  .rel-ad i { width: 9px; height: 9px; margin: 2px; background: var(--ad); }
+  .key-item .rel i { width: 15px; height: 15px; }
+
+  .dom { margin-top: 40px; }
+  .dom-head { padding-bottom: 10px; border-bottom: 2px solid var(--border-2); }
+  .dom-head h2 { font: 400 1.6rem/1.2 var(--display); color: var(--navy); }
+  .rows { display: grid; gap: 10px; margin-top: 12px; }
+  .row { display: grid; grid-template-columns: minmax(200px, 27%) 1fr; gap: 20px; padding: 16px 18px 16px 16px;
+    border: 1px solid var(--border); border-radius: 10px; align-items: start; }
+  .left h3 { font: 800 1.08rem/1.3 var(--body); color: var(--navy); }
+  .task { margin: 6px 0 0; font-size: .88rem; color: var(--muted); line-height: 1.45; }
+  .ecds { display: inline-block; margin-top: 10px; font: 700 .74rem/1.2 var(--body); color: var(--navy);
+    background: var(--panel); border-radius: 999px; padding: 5px 10px; }
+  .right { display: grid; gap: 14px; }
+  .match { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: start; }
+  .match + .match { padding-top: 14px; border-top: 1px dashed var(--border-2); }
+  .kcard { display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 10px;
+    border: 1.5px solid var(--border-2); background: #fff; }
+  .thumb { width: 72px; height: 54px; border-radius: 6px; overflow: hidden; background: #f0eeeb; flex: none; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .kbody { display: grid; gap: 3px; min-width: 0; }
+  .kk { font: 700 .66rem/1 var(--body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .kbody b { font-size: 1rem; line-height: 1.2; color: var(--navy); }
+  .text p { margin: 0; font-size: .95rem; }
+  .text p + p { margin-top: 6px; }
+  .text b { color: var(--navy); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+  .box { padding: 18px 20px; background: var(--panel); border-radius: var(--r); }
+  .box h2 { font: 400 1.25rem/1.2 var(--display); color: var(--navy); }
+  .box > p { margin: 6px 0 12px; color: var(--muted); font-size: .92rem; }
+  .box ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .box li { display: flex; justify-content: space-between; gap: 12px; font-size: .92rem; }
+  .box li span { color: var(--muted); text-align: right; }
+  .box .kcards { display: grid; gap: 8px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: .88rem; color: var(--muted); max-width: 84ch; }
+  footer p + p { margin-top: 8px; }
+  @media (max-width: 1000px) { .key { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) { .match { grid-template-columns: 1fr; gap: 10px; } }
+  @media (max-width: 560px) { .key { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .row, .two { grid-template-columns: 1fr; } .header-inner { padding-block: 1rem; } }
+</style>
+</head>
+<body>
+
+
+<header class="header"><div class="header-inner">
+  <a href="https://www.khanacademy.org/kids" target="_blank" rel="noopener noreferrer" aria-label="Khan Academy Kids"><img src="assets/khan-kids-logo.png" alt="Khan Academy Kids" width="800" height="222"></a>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Khan Kids Assessments: CIRCLE Crosswalk</h1>
+    <p>How Khan Kids assessments line up with CIRCLE Progress Monitoring (CPM), 2026-27. For each CPM measure, see the Khan Kids assessment that covers the same skill, and where the two differ.</p>
+    <p>Khan Kids complements CPM; it doesn't replace it. Khan Kids results show what a child knows, but they don't convert into CPM scores.</p>
+  </div>
+
+  <div class="key" aria-label="How to read the marks">
+    <div class="key-item"><h2><span class="rel rel-al"><i></i>Aligned</span></h2><p>Same skill, and the child answers the same way: by pointing or selecting.</p></div>
+    <div class="key-item"><h2><span class="rel rel-mo"><i></i>Same skill, different response</span></h2><p>Same skill, but in CPM the child says the answer aloud, and in Khan Kids the child taps it.</p></div>
+    <div class="key-item"><h2><span class="rel rel-pa"><i></i>Partial</span></h2><p>Khan Kids covers part of what the CPM measure includes. The Gap says what's missing.</p></div>
+    <div class="key-item"><h2><span class="rel rel-ad"><i></i>Related skill</span></h2><p>For CPM's observation checklists: Khan Kids measures a related skill directly, which can inform the teacher's rating.</p></div>
+  </div>
+
+  <section class="dom"><div class="dom-head"><h2>Literacy and Language</h2></div><div class="rows">
+<article class="row">
+  <div class="left"><h3>Rapid Letter Naming</h3><p class="task">The child names letters shown one at a time, for 60 seconds.</p><span class="ecds">Reported to TEA · Emergent Literacy: Reading</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT3a.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Letter Names</b><span class="rel rel-mo"><i></i>Same skill, different response</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both assess letter-name knowledge.</p><p><b>Gap:</b> Khan says a letter name and the child selects the letter, moving from more common to least common letters. CPM shows a letter and the child names it aloud. It is timed (60s, 3s per letter) and counts letters named. Khan Kids is not timed.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Rapid Vocabulary</h3><p class="task">The child names pictures of objects and actions, for 60 seconds.</p><span class="ecds">Reported to TEA · Language &amp; Communication</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LAN6.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Vocabulary</b><span class="rel rel-mo"><i></i>Same skill, different response</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both assess vocabulary for common objects and actions.</p><p><b>Gap:</b> Khan says a word and the child selects the matching picture, moving from more common to least common words. CPM shows a picture and the child names it aloud. It is timed (60s, 3s per picture). Khan Kids is not timed. Understanding a word and naming it quickly are related but different skills.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Phonological Awareness: Rhyming</h3><p class="task">Easier items: the child points to the pictures that rhyme. Harder items are oral only, with no pictures.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT1a.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Rhyming</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Khan starts with kids engaging in rhyming, then selecting the word that completes the rhyme, selecting the word that rhymes with a target, and finding the two words that rhyme in a set of four words. In CPM the child points to the pictures that rhyme.</p><p><b>Gap:</b> CPM&#x27;s harder items are oral only, with no pictures. Khan does not assess production (saying a rhyming word).</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Phonological Awareness: Sound Discrimination</h3><p class="task">The child tells whether words start with the same sound, with and without pictures.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT1c.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Beginning Sounds</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Khan starts with kids engaging in games about beginning sounds, then selecting words that start with the same sound, and in Kindergarten matching digraphs (sh, ch) and initial letters.</p><p><b>Gap:</b> CPM also includes ending sounds and telling whether two words are the same. Khan assesses beginning sounds only.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Phonological Awareness: Blending</h3><p class="task">The teacher says word parts with a short pause; the child points to or says the word.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT1b.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Blending</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Khan moves from blending two words into a compound word (snow + man), to syllables (to-ma-to), to onset and rime (r + ing) and single sounds (d-o-g) in Kindergarten.</p><p><b>Gap:</b> CPM&#x27;s items are at the onset-and-rime level, which Khan reaches in its Kindergarten module. On harder CPM items the child says the word aloud.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Phonological Awareness: Syllable &amp; Sentence Awareness</h3><p class="task">The child claps once for each word in a sentence or syllable in a word.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT1b.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Blending</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both build awareness that sentences break into words and words into syllables.</p><p><b>Gap:</b> CPM has the child take words apart by clapping. Khan has the child put parts together into a word.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Letter-Sound Correspondence</h3><p class="task">The child says the sound of each of 12 letters.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT3b.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Letter Sounds</b><span class="rel rel-mo"><i></i>Same skill, different response</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both assess letter-sound knowledge.</p><p><b>Gap:</b> Khan plays a sound and the child selects the letter; in Kindergarten the child also selects the sound for a letter shown. CPM shows a letter and the child says its sound.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Story Retell</h3><p class="task">After hearing a short picture story, the child retells it in their own words.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT4.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Retell Stories</b><span class="rel rel-mo"><i></i>Same skill, different response</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both look at story structure: the main character, key events, and their order.</p><p><b>Gap:</b> CPM has the child retell the story aloud and also looks for setting, problem, and ending. Khan has the child select the character and what happened next.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Story Comprehension</h3><p class="task">The child answers three questions about the story aloud.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT5.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Answer Questions</b><span class="rel rel-mo"><i></i>Same skill, different response</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both ask questions about a story the child just heard. Khan covers characters&#x27; feelings, setting, key details, and cause and effect.</p><p><b>Gap:</b> CPM&#x27;s child answers aloud and is asked for the main idea. Khan&#x27;s child selects answers and is not asked for the main idea.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Book &amp; Print Awareness</h3><p class="task">Using a real picture book, the child shows or tells about the book and its print.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/LIT2.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Concepts of Print</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both cover telling print from pictures, holding a book correctly, where reading starts, reading left to right and top to bottom, and words on a page.</p><p><b>Gap:</b> CPM also asks about the author&#x27;s and illustrator&#x27;s jobs, the front cover, the title, a single letter, and turning pages. CPM uses a real book; Khan uses an on-screen book.</p></div>
+</div></div>
+</article></div></section><section class="dom"><div class="dom-head"><h2>Math</h2></div><div class="rows">
+<article class="row">
+  <div class="left"><h3>Counting</h3><p class="task">The child counts aloud, counts pictured objects, and finds a group with a given number.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT3.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Count 1 by 1</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both have the child count objects and tell how many. Khan goes from 3 to 20 objects and also has the child make sets.</p><p><b>Gap:</b> CPM also has the child count aloud as high as they can, and the child says each total. Khan has the child select or build it.</p></div>
+</div>
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT2.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Subitizing</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both ask the child to recognize small quantities at a glance, without counting.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Numbers</h3><p class="task">The child points to named numerals and names numerals aloud.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT5.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Numerals</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both ask the child to find a numeral when it is named, up to 20 in Khan&#x27;s Kindergarten module.</p><p><b>Gap:</b> CPM also has the child name numerals aloud. Khan also has the child match numerals to quantities.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Shapes</h3><p class="task">The child names shapes and finds every example of a shape in a group.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT9.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Shapes</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both ask the child to find named shapes, including shapes in different sizes and orientations.</p><p><b>Gap:</b> CPM also has the child name shapes aloud and includes a 3D shape.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Operations</h3><p class="task">The child solves short story problems about adding to or taking away from a group.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT6a.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Adding</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both use short story problems about putting groups together.</p><p><b>Gap:</b> Khan&#x27;s Adding assessment starts at the Age 4 level.</p></div>
+</div>
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT6b.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Subtracting</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both use short story problems about taking some away.</p><p><b>Gap:</b> Khan&#x27;s Subtracting assessment starts at the Age 4 level.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Patterns</h3><p class="task">The child points to what comes next in a pattern.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT7.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Patterns</b><span class="rel rel-al"><i></i>Aligned</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Both ask the child to choose what comes next in a pattern. Khan also has the child copy patterns and fill in missing pieces.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Math Language</h3><p class="task">The child points to answers about size, amount, order, and position.</p><span class="ecds">Reported to TEA · Mathematics</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT8.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Measurement</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Taller, shorter, and measuring height and length.</p><p><b>Gap:</b> CPM also asks about capacity (how much a container holds), which Khan does not assess.</p></div>
+</div>
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT4.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>More or Less</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> More, fewer, and the same, plus first, second, third.</p></div>
+</div>
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/MAT10.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Position of Objects</b><span class="rel rel-pa"><i></i>Partial</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Position words, from the most common ones to two-part directions.</p></div>
+</div></div>
+</article></div></section><section class="dom"><div class="dom-head"><h2>Observation Checklists</h2></div><div class="rows">
+<article class="row">
+  <div class="left"><h3>Approaches to Learning</h3><p class="task">Teacher-rated checklist: initiative, curiosity, flexibility, creativity.</p></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/ATL9.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Flexible Thinking</b><span class="rel rel-ad"><i></i>Related skill</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Khan&#x27;s card-sorting task measures flexible thinking directly, a skill the checklist rates from classroom observation.</p><p><b>Gap:</b> Khan results can inform a teacher&#x27;s rating but don&#x27;t replace it.</p></div>
+</div></div>
+</article>
+<article class="row">
+  <div class="left"><h3>Social &amp; Emotional</h3><p class="task">Teacher-rated checklist: social behavior, self-regulation, self-care, attention.</p><span class="ecds">Reported to TEA · Health &amp; Wellness</span></div>
+  <div class="right">
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/ATL5a.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Impulse Control</b><span class="rel rel-ad"><i></i>Related skill</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Impulse control relates to the checklist&#x27;s self-regulation items.</p></div>
+</div>
+<div class="match">
+  <div class="kcard"><div class="thumb"><img src="assets/ATL8.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><span class="kk">Khan Kids assessment</span><b>Working Memory</b><span class="rel rel-ad"><i></i>Related skill</span></div></div>
+  <div class="text"><p><b>Alignment:</b> Working memory supports the checklist&#x27;s attention items.</p><p><b>Gap:</b> Both Khan assessments touch a small part of a broad checklist.</p></div>
+</div></div>
+</article></div></section>
+
+  <div class="two">
+    <div class="box">
+      <h2>CPM measures without a Khan Kids match</h2>
+      <p>Khan Kids doesn't assess these areas.</p>
+      <ul><li><b>Science</b><span>Direct measure</span></li><li><b>Social Studies</b><span>Direct measure</span></li><li><b>Early Writing</b><span>Checklist · reported to TEA (ECDS Writing)</span></li><li><b>Physical Development &amp; Health</b><span>Checklist</span></li><li><b>Speech Production &amp; Sentence Skills</b><span>Checklist</span></li><li><b>Motivation to Read</b><span>Checklist</span></li></ul>
+    </div>
+    <div class="box">
+      <h2>Khan Kids assessments without a CPM match</h2>
+      <p>These language assessments cover word meanings, which CPM doesn't measure.</p>
+      <div class="kcards"><div class="kcard"><div class="thumb"><img src="assets/LAN7a.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><b>Word Categories</b></div></div><div class="kcard"><div class="thumb"><img src="assets/LAN7b.png" alt="" width="240" height="180" loading="lazy"></div><div class="kbody"><b>Shared Characteristics</b></div></div></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>CPM measures are described from CLI Engage public materials for the 2026-27 version, which redesigned Phonological Awareness, Math, and Rapid Vocabulary. "Reported to TEA" follows TEA's HQPK progress monitoring crosswalk (2025-26). Khan Kids assessments are compared at every level, Age 2 through Kindergarten.</p>
+    <p>CIRCLE Progress Monitoring is developed by the Children's Learning Institute at UTHealth Houston. This crosswalk is produced by Khan Academy Kids and is not endorsed by CLI.</p>
+  </footer>
+</div>
+
+</body>
+</html>
